@@ -93,7 +93,7 @@ Authorization: Bearer <your_token>
 ### Authentication APIs
 
 #### 1. **Login**
-**Endpoint:** `/api/token/`
+**Endpoint:** `/api/login/`
 
 **Method:** POST
 
@@ -110,25 +110,6 @@ Authorization: Bearer <your_token>
 {
   "access": "<access_token>",
   "refresh": "<refresh_token>"
-}
-```
-
-#### 2. **Refresh Token**
-**Endpoint:** `/api/token/refresh/`
-
-**Method:** POST
-
-**Request Body:**
-```json
-{
-  "refresh": "<refresh_token>"
-}
-```
-
-**Response:**
-```json
-{
-  "access": "<new_access_token>"
 }
 ```
 
@@ -159,33 +140,12 @@ Authorization: Bearer <your_token>
 }
 ```
 
-#### 2. **Get Current User**
-**Endpoint:** `/api/user/`
-
-**Method:** GET
-
-**Headers:**
-```
-Authorization: Bearer <access_token>
-```
-
-**Response:**
-```json
-{
-  "id": 1,
-  "email": "user@example.com",
-  "first_name": "John",
-  "last_name": "Doe",
-  "role": 1
-}
-```
-
 ---
 
 ### Availability Management APIs
 
 #### 1. **Register Availability**
-**Endpoint:** `/api/availability/`
+**Endpoint:** `/api/register-availability/`
 
 **Method:** POST
 
